@@ -1,4 +1,4 @@
-# 🚀 Alimaaz Akhter — Professional Data Science, ML & AI Portfolio
+# 🚀 Alimaaz Akhter — Professional Data Science, AI/ML and Web Dev Portfolio
 
 Welcome to the repository of my professional portfolio website. Designed as a high-performance Single Page Application (SPA), this platform serves as the central hub for my freelancing services, showcasing production-grade projects across machine learning, AI automation, and full-stack web applications.
 
