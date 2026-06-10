@@ -1,4 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 100 100" fill="none">
-  <rect width="100" height="100" rx="16" fill="#0ea5a4"/>
-  <text x="50" y="57" font-family="Inter, Arial, sans-serif" font-size="44" fill="white" text-anchor="middle" font-weight="700">AA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Top Face -->
+  <path d="M50 50 L15 30 L50 10 L85 30 Z" fill="url(#logo-grad-top)"/>
+  <!-- Left Face -->
+  <path d="M50 50 L15 30 L15 70 L50 90 Z" fill="url(#logo-grad-left)"/>
+  <!-- Right Face -->
+  <path d="M50 50 L85 30 L85 70 L50 90 Z" fill="url(#logo-grad-right)"/>
+  <defs>
+    <linearGradient id="logo-grad-top" x1="50" y1="10" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#d8b4fe"/>
+    </linearGradient>
+    <linearGradient id="logo-grad-left" x1="15" y1="50" x2="50" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="logo-grad-right" x1="85" y1="50" x2="50" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3730a3"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
 </svg>
