@@ -1,0 +1,203 @@
+Scanning 20 files for non-ASCII/emojis...
+
+--- app\layout.tsx ---
+Line 10: [U+2014(—)] | title: 'Alimaaz Akhter — Data Science & ML Portfolio',
+
+--- app\page.tsx ---
+Line 37: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── HERO ── Full viewport, cinematic */}
+Line 45: [U+2022(•), U+2022(•)] | AI Solutions • Data Insights • Web Dev
+Line 62: [U+2192(→)] | <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+Line 73: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── MARQUEE ── */}
+Line 76: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── STATS ── */}
+Line 87: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── ABOUT ── */}
+Line 104: [U+1F393(🎓), U+2014(—)] | { icon: "🎓", title: "Education", desc: "MCA — Sardar Vallabhbhai Global University" },
+Line 105: [U+1F4CD(📍)] | { icon: "📍", title: "Location", desc: "Ahmedabad, Gujarat, India" },
+Line 106: [U+1F4BC(💼)] | { icon: "💼", title: "Status", desc: "Open for Internships & Freelance" },
+Line 107: [U+1F52C(🔬)] | { icon: "🔬", title: "Focus", desc: "ML, Generative AI, Data Engineering" },
+Line 120: [U+2192(→)] | <span className="transition-transform group-hover:translate-x-1">→</span>
+Line 128: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── WHAT I DO ── */}
+Line 140: [U+1F4CA(📊)] | { icon: "📊", title: "Data Analysis", desc: "Exploring, cleaning, and visualizing complex datasets with Python, Pandas, and modern BI tools." },
+Line 141: [U+1F916(🤖)] | { icon: "🤖", title: "Machine Learning", desc: "Designing and training ML models for classification, prediction, and intelligent automation." },
+Line 142: [U+1F310(🌐)] | { icon: "🌐", title: "AI Web Apps", desc: "Building interactive interfaces with Flask and Streamlit that let users interact with ML models." },
+Line 143: [U+26A1(⚡)] | { icon: "⚡", title: "AI Automation", desc: "Creating smart automation pipelines connecting APIs, LLMs, and tools to eliminate manual work." },
+Line 157: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── SELECTED PROJECTS ── */}
+Line 168: [U+2192(→)] | View All 18 Projects <span className="transition-transform group-hover:translate-x-1">→</span>
+Line 176: [U+2014(—)] | { title: "GoneSpotter — Change Detection", desc: "Intelligent tool that highlights missing objects from before-and-after photos.", tags: ["OpenCV", "Vision"], gradient: "from-violet-500/20 to-purple-500/20", link: "/projects/p6" },
+Line 179: [U+2192(→), U+2192(→), U+2192(→)] | { title: "n8n Feedback Automation", desc: "Automated workflow: feedback capture → Slack notify → Airtable → email confirmation.", tags: ["n8n", "AI"], gradient: "from-blue-500/20 to-indigo-500/20", link: "/projects/p10" },
+Line 200: [U+2500(─), U+2500(─), U+2500(─), U+2500(─)] | {/* ── CTA ── */}
+Line 210: [U+2192(→)] | Get In Touch <span className="transition-transform group-hover:translate-x-1">→</span>
+
+--- app\certificates\page.tsx ---
+Line 130: [U+1F4C4(📄)] | <span className="text-6xl mb-2 drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">📄</span>
+Line 146: [U+2192(→)] | View Certificate <span>→</span>
+
+--- app\components\Footer.tsx ---
+Line 38: [U+2014(—)] | <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-500 leading-relaxed">Data Science, Machine Learning, and AI — turning raw data into intelligent systems.</p>
+Line 80: [U+00A9(©)] | <p className="text-xs text-slate-400 dark:text-slate-600 text-center">© {new Date().getFullYear()} Alimaaz Akhter. All rights reserved.</p>
+
+--- app\components\Marquee.tsx ---
+Line 6: [U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•), U+2022(•)] | 'Python', '•', 'Machine Learning', '•', 'Data Science', '•', 'Web Development', '•', 'Scikit-Learn', '•', 'OpenCV', '•', 'Pandas', '•', 'Power BI', '•', 'Streamlit', '•', 'Flask', '•', 'Generative AI', '•', 'NLP', '•', 'SQL', '•', 'n8n Automation', '•', 'LLMs', '•', 'Deep Learning', '•', 'React', '•', 'Next.js', '•', 'MongoDB', '•', 'Supabase', '•', 'MySQL', '•', 'Git', '•', 'GitHub', '•', 'Hadoop', '•', 'Firebase', '•', 'Slack', '•', 'Airtable', '•'
+Line 16: [U+2022(•)] | className={`mx-3 sm:mx-4 text-sm sm:text-base font-medium ${item === '•'
+
+--- app\components\ProjectDetailView.tsx ---
+Line 28: [U+2193(↓)] | ↓
+Line 94: [U+2190(←)] | <span className="transition-transform group-hover:-translate-x-1">←</span>
+Line 120: [U+2197(↗)] | <span className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+Line 131: [U+25B6(▶)] | <span className="text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">▶</span>
+Line 147: [U+26A1(⚡)] | <span className="text-purple-500">⚡</span> {section.title}
+Line 158: [U+1F464(👤)] | <PipelineNode icon="👤" title="User Input" desc="Idea & Params" delay={0.1} />
+Line 160: [U+1F9E0(🧠)] | <PipelineNode icon="🧠" title="Planner Agent" desc="Breaks down tasks" delay={0.2} />
+Line 162: [U+2699(⚙), U+FE0F(️)] | <PipelineNode icon="⚙️" title="Generator Agent" desc="Creates structured content" delay={0.3} />
+Line 164: [U+1F4DD(📝)] | <PipelineNode icon="📝" title="Formatter Agent" desc="Cleans & organizes" delay={0.4} />
+Line 166: [U+1F4C4(📄)] | <PipelineNode icon="📄" title="Final Blueprint" desc="PDF/DOCX Output" delay={0.5} />
+Line 177: [U+1F338(🌸)] | <span className="text-purple-500">🌸</span> {section.title}
+Line 188: [U+1F33A(🌺)] | <PipelineNode icon="🌺" title="Iris Data" desc="150 Samples" delay={0.1} />
+Line 190: [U+1F9E0(🧠)] | <PipelineNode icon="🧠" title="JS ML Engine" desc="LR / KNN / DT" delay={0.2} />
+Line 192: [U+1F3A8(🎨)] | <PipelineNode icon="🎨" title="SVG Visualizer" desc="Live Morphing" delay={0.3} />
+Line 194: [U+26A1(⚡)] | <PipelineNode icon="⚡" title="FastAPI" desc="Server Inference" delay={0.4} />
+Line 205: [U+1F393(🎓)] | <span className="text-purple-500">🎓</span> {section.title}
+Line 216: [U+1F4C1(📁)] | <PipelineNode icon="📁" title="Dataset" desc="1,000 Records" delay={0.1} />
+Line 218: [U+1F9F9(🧹)] | <PipelineNode icon="🧹" title="Prep" desc="One-hot Encoding" delay={0.2} />
+Line 220: [U+1F9E0(🧠)] | <PipelineNode icon="🧠" title="Training" desc="7 Regressors" delay={0.3} />
+Line 222: [U+1F4CA(📊)] | <PipelineNode icon="📊" title="Validation" desc="5-Fold CV" delay={0.4} />
+Line 224: [U+1F3C6(🏆)] | <PipelineNode icon="🏆" title="Leaderboard" desc="Rank & Compare" delay={0.5} />
+Line 236: [U+1F321(🌡), U+FE0F(️)] | <span className="text-purple-500">🌡️</span> {section.title}
+Line 247: [U+1F4F7(📷)] | <PipelineNode icon="📷" title="Raw Inputs" desc="RGB & Thermal Pairs" delay={0.1} />
+Line 249: [U+1F9F9(🧹)] | <PipelineNode icon="🧹" title="Sobel Edge" desc="Gradient Filter" delay={0.2} />
+Line 251: [U+1F3AF(🎯)] | <PipelineNode icon="🎯" title="ROI Masking" desc="Noise Filtering" delay={0.3} />
+Line 253: [U+2699(⚙), U+FE0F(️)] | <PipelineNode icon="⚙️" title="Grid Search" desc="Coarse-to-Fine Opt" delay={0.4} />
+Line 255: [U+1F5BC(🖼), U+FE0F(️)] | <PipelineNode icon="🖼️" title="Fused Output" desc="Affine Warped Blend" delay={0.5} />
+Line 267: [U+1F6F0(🛰), U+FE0F(️)] | <span className="text-purple-500">🛰️</span> {section.title}
+Line 278: [U+1F4F7(📷)] | <PipelineNode icon="📷" title="Select Images" desc="Before & After Pairs" delay={0.1} />
+Line 280: [U+1F9EE(🧮)] | <PipelineNode icon="🧮" title="Diff Mask" desc="Grayscale Pixel Sub" delay={0.2} />
+Line 282: [U+1F9F9(🧹)] | <PipelineNode icon="🧹" title="Filter Noise" desc="Morphological Closing/Opening" delay={0.3} />
+Line 284: [U+1F3AF(🎯)] | <PipelineNode icon="🎯" title="CCL Labeling" desc="BFS Bounding Boxes" delay={0.4} />
+Line 286: [U+1F4E5(📥)] | <PipelineNode icon="📥" title="Export" desc="Single Sheet / Batch ZIP" delay={0.5} />
+Line 298: [U+1F4CB(📋)] | <span className="text-purple-500">📋</span> {section.title}
+Line 309: [U+1F4C1(📁)] | <PipelineNode icon="📁" title="Upload" desc="Word Template & PDFs" delay={0.1} />
+Line 311: [U+1F50D(🔍)] | <PipelineNode icon="🔍" title="Scan" desc="Extract Placeholders" delay={0.2} />
+Line 313: [U+1F9E0(🧠)] | <PipelineNode icon="🧠" title="AI Extract" desc="LLM Document Mapping" delay={0.3} />
+Line 315: [U+1F4CB(📋)] | <PipelineNode icon="📋" title="Verify" desc="Interactive Review" delay={0.4} />
+Line 317: [U+1F4E5(📥)] | <PipelineNode icon="📥" title="Download" desc="Formatted Word Doc" delay={0.5} />
+Line 329: [U+1F4C9(📉)] | <span className="text-purple-500">📉</span> {section.title}
+Line 340: [U+1F40D(🐍)] | <PipelineNode icon="🐍" title="Python ETL" desc="Clean & Aggregate" delay={0.1} />
+Line 342: [U+1F4E6(📦)] | <PipelineNode icon="📦" title="Data Layer" desc="JS Module" delay={0.2} />
+Line 344: [U+1F4CA(📊)] | <PipelineNode icon="📊" title="Chart.js" desc="5 Dashboards" delay={0.3} />
+Line 346: [U+1F50D(🔍)] | <PipelineNode icon="🔍" title="Explorer" desc="Search & Export" delay={0.4} />
+Line 357: [U+1F4CA(📊)] | <span className="text-purple-500">📊</span> {section.title}
+Line 368: [U+1F4C1(📁)] | <PipelineNode icon="📁" title="Raw Data" desc="CSV Extraction" delay={0.1} />
+Line 370: [U+1F40D(🐍)] | <PipelineNode icon="🐍" title="Python EDA" desc="Pandas & Cleaning" delay={0.2} />
+Line 372: [U+2699(⚙), U+FE0F(️)] | <PipelineNode icon="⚙️" title="Data Modeling" desc="Power BI DAX" delay={0.3} />
+Line 374: [U+1F4C8(📈)] | <PipelineNode icon="📈" title="Dashboard" desc="Interactive Insights" delay={0.4} />
+Line 385: [U+1F4CA(📊)] | <span className="text-purple-500">📊</span> {section.title}
+Line 396: [U+1F4CC(📌)] | <PipelineNode icon="📌" title="Scenario" desc="Business Needs" delay={0.1} />
+Line 398: [U+1F4CA(📊)] | <PipelineNode icon="📊" title="Visuals" desc="Chart Selection" delay={0.2} />
+Line 400: [U+1F3A8(🎨)] | <PipelineNode icon="🎨" title="Dashboard" desc="Design UI" delay={0.3} />
+Line 402: [U+1F4A1(💡)] | <PipelineNode icon="💡" title="Insights" desc="Executive Comm." delay={0.4} />
+Line 413: [U+1F4CA(📊)] | <span className="text-purple-500">📊</span> {section.title}
+Line 424: [U+1F4C1(📁)] | <PipelineNode icon="📁" title="Raw Data" desc="Booking Data" delay={0.1} />
+Line 426: [U+1F40D(🐍)] | <PipelineNode icon="🐍" title="Python EDA" desc="Data Cleaning" delay={0.2} />
+Line 428: [U+1F4CA(📊)] | <PipelineNode icon="📊" title="Excel" desc="Pivot Tables" delay={0.3} />
+Line 430: [U+1F3E8(🏨)] | <PipelineNode icon="🏨" title="Dashboard" desc="Insights" delay={0.4} />
+Line 441: [U+1F3E6(🏦)] | <span className="text-purple-500">🏦</span> {section.title}
+Line 452: [U+1F4BB(💻)] | <PipelineNode icon="💻" title="Next.js UI" desc="Client React Dash" delay={0.1} />
+Line 454: [U+26A1(⚡)] | <PipelineNode icon="⚡" title="API Routes" desc="Serverless Endpoints" delay={0.2} />
+Line 456: [U+1F5C4(🗄), U+FE0F(️)] | <PipelineNode icon="🗄️" title="Prisma ORM" desc="Schema Validation" delay={0.3} />
+Line 458: [U+1F6E2(🛢), U+FE0F(️)] | <PipelineNode icon="🛢️" title="PostgreSQL" desc="Neon Cloud DB" delay={0.4} />
+Line 469: [U+26A1(⚡)] | <span className="text-purple-500">⚡</span> {section.title}
+Line 480: [U+1F464(👤)] | <PipelineNode icon="👤" title="User Action" desc="Search & Chat" delay={0.1} />
+Line 482: [U+1F4BB(💻)] | <PipelineNode icon="💻" title="Next.js App" desc="Immersive UI" delay={0.2} />
+Line 484: [U+1F9E0(🧠)] | <PipelineNode icon="🧠" title="AI & APIs" desc="Gemini + TMDb" delay={0.3} />
+Line 486: [U+1F5C4(🗄), U+FE0F(️)] | <PipelineNode icon="🗄️" title="Database" desc="Supabase + Prisma" delay={0.4} />
+Line 497: [U+26A1(⚡)] | <span className="text-purple-500">⚡</span> {section.title}
+Line 508: [U+1F464(👤)] | <PipelineNode icon="👤" title="User Input" desc="News Article Text" delay={0.1} />
+Line 510: [U+1F9F9(🧹)] | <PipelineNode icon="🧹" title="Pre-processing" desc="Clean & Lowercase" delay={0.2} />
+Line 512: [U+1F9EE(🧮)] | <PipelineNode icon="🧮" title="TF-IDF Math" desc="L2-Normalized Vector" delay={0.3} />
+Line 514: [U+1F9E0(🧠)] | <PipelineNode icon="🧠" title="Inference" desc="Logistic Regression" delay={0.4} />
+Line 516: [U+1F4CA(📊)] | <PipelineNode icon="📊" title="Dashboard" desc="LIME Words Highlight" delay={0.5} />
+Line 527: [U+2699(⚙), U+FE0F(️)] | <span className="text-purple-500">⚙️</span> {section.title}
+Line 538: [U+1F4DD(📝)] | <PipelineNode icon="📝" title="User Form" desc="Data Capture" delay={0.1} />
+Line 540: [U+1F916(🤖)] | <PipelineNode icon="🤖" title="Gemini AI" desc="Categorization" delay={0.2} />
+Line 542: [U+1F500(🔀)] | <PipelineNode icon="🔀" title="Routing Switch" desc="Logic Branching" delay={0.3} />
+Line 544: [U+26A1(⚡)] | <PipelineNode icon="⚡" title="Integrations" desc="Airtable, Slack, Gmail" delay={0.4} />
+Line 555: [U+1F3D7(🏗), U+FE0F(️)] | <span className="text-purple-500">🏗️</span> {section.title}
+Line 566: [U+1F4BB(💻)] | <PipelineNode icon="💻" title="React UI" desc="TypeScript + Vite" delay={0.1} />
+Line 568: [U+2699(⚙), U+FE0F(️)] | <PipelineNode icon="⚙️" title="Flask API" desc="Python Backend" delay={0.2} />
+Line 570: [U+1FAC0(🫀)] | <PipelineNode icon="🫀" title="ML Model" desc="Random Forest Classifier" delay={0.3} />
+Line 581: [U+2728(✨), U+1F6E0(🛠), U+FE0F(️)] | <span className="text-purple-500">{section.id === 'features' ? '✨' : '🛠️'}</span> {section.title}
+Line 591: [U+2756(❖)] | <span className="text-purple-600 dark:text-purple-400">❖</span>
+Line 618: [U+2726(✦)] | <span className="text-purple-600 dark:text-purple-400 mt-1 shrink-0">✦</span>
+Line 638: [U+25B6(▶)] | <span className="text-purple-500">▶</span> Project Demo
+Line 658: [U+1F4F8(📸)] | <span className="text-purple-500">📸</span> Project Gallery
+Line 678: [U+1F3C6(🏆)] | <span className="text-purple-500">🏆</span> Certificate of Completion
+Line 694: [U+1F4A1(💡)] | <span className="text-purple-500 text-2xl mt-1">💡</span>
+
+--- app\contact\page.tsx ---
+Line 34: [U+1F4E7(📧)] | { icon: "📧", label: "Email", value: "alimaaz1501@gmail.com", href: "mailto:alimaaz1501@gmail.com" },
+Line 35: [U+1F4F1(📱)] | { icon: "📱", label: "Phone", value: "+91 8780837840", href: "tel:+918780837840" },
+Line 36: [U+1F4CD(📍)] | { icon: "📍", label: "Location", value: "Ahmedabad, Gujarat, India", href: null },
+Line 85: [U+2192(→)] | Send Message <span className="transition-transform group-hover:translate-x-1">→</span>
+
+--- app\profile\page.tsx ---
+Line 41: [U+1F393(🎓)] | <span className="text-2xl">🎓</span> Academic Journey
+Line 45: [U+2014(—)] | { degree: "Master of Computer Applications", short: "MCA", institution: "Sardar Vallabhbhai Global University (SVGU), Ahmedabad", years: "2025 — 2027", detail: "Focus on advanced ML/AI and Generative AI applications", current: true },
+Line 46: [U+2014(—), U+2014(—)] | { degree: "Bachelor of Computer Applications", short: "BCA", institution: "Rai School of Engineering (RU), Ahmedabad", years: "2022 — 2025", detail: "CGPA: 8.58/10 — Strong foundation in programming and data concepts", current: false },
+Line 69: [U+26A1(⚡)] | <span className="text-2xl">⚡</span> Tech Stack
+Line 87: [U+1F680(🚀)] | <span className="text-2xl">🚀</span> Key Projects
+Line 111: [U+1F3C6(🏆)] | <span className="text-2xl">🏆</span> Certifications
+Line 124: [U+2014(—)] | <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">{cert.org} — {cert.date}</p>
+
+--- app\projects\page.tsx ---
+Line 53: [U+1F5C2(🗂), U+FE0F(️), U+1F9E0(🧠), U+1F916(🤖), U+1F4CA(📊), U+1F310(🌐)] | const tabs = [{ id: 'all', label: 'All Projects', icon: '🗂️' }, { id: 'ml', label: 'Machine Learning', icon: '🧠' }, { id: 'ai', label: 'AI & Automation', icon: '🤖' }, { id: 'data', label: 'Data & Dashboards', icon: '📊' }, { id: 'web', label: 'Web Applications', icon: '🌐' }];
+
+--- lib\data.ts ---
+Line 38: [U+1F916(🤖)] | emoji: "🤖",
+Line 98: [U+2014(—)] | title: "TruthShield AI — Fake News Detector",
+Line 102: [U+1F6E1(🛡), U+FE0F(️)] | emoji: "🛡️",
+Line 108: [U+1F50C(🔌)] | note: `🔌 Chrome Extension Support
+Line 113: [U+2022(•)] | • Download the \`chrome-extension\` folder from GitHub
+Line 114: [U+2022(•), U+2192(→)] | • Load it via chrome://extensions → Load Unpacked
+Line 115: [U+2022(•)] | • Paste the deployed TruthShield AI project link in extension settings
+Line 166: [U+1F338(🌸)] | emoji: "🌸",
+Line 176: [U+2014(—)] | content: "This project is an interactive full-stack Machine Learning Studio built around Fisher's classic Iris Dataset (150 samples, 3 species). It goes far beyond a simple classifier — featuring a live prediction interface, a real-time SVG flower visualizer that morphs based on input dimensions, an in-browser model training sandbox with multiple algorithms, and a professional FastAPI backend for server-side inference."
+Line 181: [U+2014(—)] | content: "The application operates as a dual-mode system — a standalone client-side ML sandbox and a full-stack Python-served application:",
+Line 184: [U+00E9(é)] | "Real-Time SVG Visualizer: Translates numeric inputs into a living flower using trigonometric radial vectors and dynamic Bézier curve paths.",
+Line 195: [U+00B0(°), U+00B0(°), U+00B0(°), U+00B0(°), U+00E9(é)] | "SVG Flower Morphing: Sepals drawn at 30°, 150°, 270° and petals at 72° intervals using dynamic quadratic Bézier curves.",
+Line 207: [U+2014(—)] | "Client-Side ML: Softmax Regression, KNN, Decision Tree (CART) — all from scratch in JS",
+Line 217: [U+2014(—)] | title: "Student Performance — Model Comparison",
+Line 221: [U+1F393(🎓)] | emoji: "🎓",
+Line 227: [U+1F50C(🔌)] | note: "🔌 Dual Architecture Support\n\nThis studio features two implementations:\n1. Static Web Studio (Client-Side): A fast, lightweight, and fully offline-compatible dashboard in HTML/CSS/JS using Chart.js that computes predictions instantly inside the browser.\n2. Streamlit Cloud (Server-Side): A Python-based analytics server utilizing Streamlit, Plotly, Seaborn, and Matplotlib.\n\nBoth projects are housed within the unified GitHub repository.",
+Line 252: [U+00B2(²)] | "Model Leaderboard: Ranks algorithms based on average R² performance, with an overlay radar chart comparing the top 3 models.",
+Line 274: [U+2014(—)] | title: "ImageFusion AI — RGB & Thermal Calibration Hub",
+Line 278: [U+1F321(🌡), U+FE0F(️)] | emoji: "🌡️",
+Line 284: [U+1F680(🚀)] | note: "🚀 Industrial Drone Inspection Applications\n\nThis project aligns Parallax Shifts between physical drone lenses (RGB and Long-Wave Thermal Infrared sensors), enabling operators to accurately map temperature anomalies (e.g. electrical hotspots, fluid pipeline leaks) onto visual components.",
+Line 331: [U+2014(—)] | title: "VisualDiffX — Satellite Change Detection Engine",
+Line 335: [U+1F6F0(🛰), U+FE0F(️)] | emoji: "🛰️",
+Line 341: [U+1F6F0(🛰), U+FE0F(️)] | note: "🛰️ Browser-Based Geospatial Change Detection\n\nUnlike traditional change detection platforms that rely on heavy server processing or complex local Python configurations, VisualDiffX runs full computer vision algorithms directly in the browser via HTML5 Canvas buffers, guaranteeing 100% user privacy and offline functionality.",
+Line 388: [U+2014(—)] | description: "Guideline Loss Report (GLR) Claims Portal — a full-stack automation web application that extracts information from PDF reports using LLMs and dynamically fills Microsoft Word template placeholders.",
+Line 391: [U+1F4CB(📋)] | emoji: "📋",
+Line 397: [U+26A1(⚡)] | note: "⚡ Accelerating Property Insurance Claims\n\nHistorically, claims adjusters and property inspector teams spend hours transcribing details from physical PDF reports into Microsoft Word templates. This platform automates the pipeline entirely using specialized LLMs with custom paragraph run-merging to protect document styles.",
+Line 442: [U+2014(—)] | title: "Vortex Bank — Enterprise Fintech SaaS",
+Line 446: [U+1F3E6(🏦)] | emoji: "🏦",
+Line 452: [U+1F680(🚀)] | note: "🚀 Evolution to Full-Stack\n\nVortex Bank originally began as a simple Python CLI application. Through continuous development, it has evolved into a production-ready, full-stack web application with a serverless architecture.",
+Line 497: [U+1F916(🤖)] | { id: "p9", title: "Agentic AI Project", description: "Autonomous AI agent with reasoning and multi-step task execution.", category: "ai", tags: ["Agentic AI", "LLM"], emoji: "🤖" },
+Line 504: [U+2699(⚙), U+FE0F(️)] | emoji: "⚙️",
+Line 557: [U+2013(–)] | description: "An interactive web-based analytics dashboard exploring India's unemployment trends (2019–2024), COVID-19 impact, and rural-urban dynamics.",
+Line 560: [U+1F4C9(📉)] | emoji: "📉",
+Line 588: [U+2013(–)] | "COVID-19 Shock: Average unemployment surged to 24.26% during April–May 2020 nationwide lockdowns.",
+Line 591: [U+00D7(×)] | "Seasonal Heatmap: Custom Year × Month heatmap revealing lockdown intensity periods and recovery phases.",
+Line 610: [U+2014(—), U+1F4CA(📊)] | { id: "p12", title: "Customer Churn — Big Data", description: "Large-scale analysis identifying key customer attrition factors.", category: "data", tags: ["Big Data", "Pandas"], emoji: "📊" },
+Line 614: [U+2014(—)] | description: "An end-to-end Data Analysis project showcasing a complete data journey—from Python EDA to an interactive Power BI Dashboard.",
+Line 617: [U+1F3E6(🏦)] | emoji: "🏦",
+Line 627: [U+2014(—)] | content: "This project showcases a complete data journey in the Banking domain—from Exploratory Data Analysis (EDA) in Python to an interactive Power BI Dashboard designed to uncover meaningful insights in banking operations and risk assessment."
+Line 645: [U+2013(–)] | "Home – Quick overview and navigation menu.",
+Line 646: [U+2013(–)] | "Loan Analysis – Trends, types, and high-risk lending areas.",
+Line 647: [U+2013(–)] | "Deposit Analysis – Patterns, customer segments, and growth metrics.",
+Line 648: [U+2013(–)] | "Summary – Key metrics and actionable insights.",
+Line 649: [U+2013(–)] | "Ask a Question – Natural language Q&A feature using Power BI's AI capabilities."
+Line 660: [U+2013(–)] | "Domain Understanding – Banking & Financial Services."
+Line 672: [U+1F4C8(📈)] | emoji: "📈",
+Line 731: [U+1F3E8(🏨)] | emoji: "🏨",
+Line 784: [U+1FAC0(🫀)] | emoji: "🫀",
+Line 850: [U+1F3AC(🎬)] | emoji: "🎬",
+Line 856: [U+26A0(⚠), U+FE0F(️)] | note: "⚠️ StreamAura 2.0 is an educational full-stack OTT platform prototype built for portfolio and technical demonstration purposes using open-source demo cinema, public trailers, and locally hosted sample media only. Commercial movies or series are not playable within the app, as uploading or streaming full-length copyrighted media without explicit permission, licensing, or rights is illegal.",

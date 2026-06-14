@@ -3,6 +3,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { Project } from '@/lib/data';
+import { 
+    User, Brain, Settings, FileEdit, FileText, Sprout, Palette, Zap, 
+    FolderOpen, Filter, BarChart3, Trophy, Camera, Target, ImageIcon, 
+    Calculator, Search, Download, TrendingDown, TrendingUp, Hotel, Landmark,
+    Play, Shield, Heart, Film, Wrench, Sparkles, Code2, Database, Server,
+    Lightbulb, Award, MapPin, Laptop, Bot, ClipboardList, GraduationCap,
+    Layers, Satellite, Thermometer
+} from 'lucide-react';
 
 const ALL_SECTIONS = [
     { id: 'overview', label: 'Overview' },
@@ -15,9 +23,9 @@ const ALL_SECTIONS = [
     { id: 'demo', label: 'Demo' }
 ];
 
-const PipelineNode = ({ title, desc, icon, delay }: { title: string, desc: string, icon: string, delay: number }) => (
+const PipelineNode = ({ title, desc, icon: IconComponent, delay }: { title: string, desc: string, icon: React.ComponentType<{ className?: string; strokeWidth?: number }>, delay: number }) => (
     <div className="glass-card rounded-xl p-4 flex flex-col items-center text-center relative z-10 w-full sm:w-40 group hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] animate-fade-in" style={{ animationDelay: `${delay}s` }}>
-        <span className="text-2xl mb-2 group-hover:scale-110 transition-transform">{icon}</span>
+        <IconComponent className="w-6 h-6 text-purple-500 mb-2 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
         <h4 className="text-sm font-bold text-slate-800 dark:text-white mb-1">{title}</h4>
         <p className="text-[10px] text-slate-500 dark:text-slate-400">{desc}</p>
     </div>
@@ -144,7 +152,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">⚡</span> {section.title}
+                                            <Zap className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -155,15 +163,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="👤" title="User Input" desc="Idea & Params" delay={0.1} />
+                                            <PipelineNode icon={User} title="User Input" desc="Idea & Params" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🧠" title="Planner Agent" desc="Breaks down tasks" delay={0.2} />
+                                            <PipelineNode icon={Brain} title="Planner Agent" desc="Breaks down tasks" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="⚙️" title="Generator Agent" desc="Creates structured content" delay={0.3} />
+                                            <PipelineNode icon={Settings} title="Generator Agent" desc="Creates structured content" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="📝" title="Formatter Agent" desc="Cleans & organizes" delay={0.4} />
+                                            <PipelineNode icon={FileEdit} title="Formatter Agent" desc="Cleans & organizes" delay={0.4} />
                                             <Arrow />
-                                            <PipelineNode icon="📄" title="Final Blueprint" desc="PDF/DOCX Output" delay={0.5} />
+                                            <PipelineNode icon={FileText} title="Final Blueprint" desc="PDF/DOCX Output" delay={0.5} />
                                         </div>
                                     </div>
                                 );
@@ -174,7 +182,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">🌸</span> {section.title}
+                                            <Sprout className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -185,13 +193,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="🌺" title="Iris Data" desc="150 Samples" delay={0.1} />
+                                            <PipelineNode icon={Sprout} title="Iris Data" desc="150 Samples" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🧠" title="JS ML Engine" desc="LR / KNN / DT" delay={0.2} />
+                                            <PipelineNode icon={Brain} title="JS ML Engine" desc="LR / KNN / DT" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🎨" title="SVG Visualizer" desc="Live Morphing" delay={0.3} />
+                                            <PipelineNode icon={Palette} title="SVG Visualizer" desc="Live Morphing" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="⚡" title="FastAPI" desc="Server Inference" delay={0.4} />
+                                            <PipelineNode icon={Zap} title="FastAPI" desc="Server Inference" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -202,7 +210,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">🎓</span> {section.title}
+                                            <GraduationCap className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -213,15 +221,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📁" title="Dataset" desc="1,000 Records" delay={0.1} />
+                                            <PipelineNode icon={FolderOpen} title="Dataset" desc="1,000 Records" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🧹" title="Prep" desc="One-hot Encoding" delay={0.2} />
+                                            <PipelineNode icon={Filter} title="Prep" desc="One-hot Encoding" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🧠" title="Training" desc="7 Regressors" delay={0.3} />
+                                            <PipelineNode icon={Brain} title="Training" desc="7 Regressors" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="📊" title="Validation" desc="5-Fold CV" delay={0.4} />
+                                            <PipelineNode icon={BarChart3} title="Validation" desc="5-Fold CV" delay={0.4} />
                                             <Arrow />
-                                            <PipelineNode icon="🏆" title="Leaderboard" desc="Rank & Compare" delay={0.5} />
+                                            <PipelineNode icon={Trophy} title="Leaderboard" desc="Rank & Compare" delay={0.5} />
                                         </div>
                                     </div>
                                 );
@@ -233,7 +241,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">🌡️</span> {section.title}
+                                            <Thermometer className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -244,15 +252,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📷" title="Raw Inputs" desc="RGB & Thermal Pairs" delay={0.1} />
+                                            <PipelineNode icon={Camera} title="Raw Inputs" desc="RGB & Thermal Pairs" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🧹" title="Sobel Edge" desc="Gradient Filter" delay={0.2} />
+                                            <PipelineNode icon={Filter} title="Sobel Edge" desc="Gradient Filter" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🎯" title="ROI Masking" desc="Noise Filtering" delay={0.3} />
+                                            <PipelineNode icon={Target} title="ROI Masking" desc="Noise Filtering" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="⚙️" title="Grid Search" desc="Coarse-to-Fine Opt" delay={0.4} />
+                                            <PipelineNode icon={Settings} title="Grid Search" desc="Coarse-to-Fine Opt" delay={0.4} />
                                             <Arrow />
-                                            <PipelineNode icon="🖼️" title="Fused Output" desc="Affine Warped Blend" delay={0.5} />
+                                            <PipelineNode icon={ImageIcon} title="Fused Output" desc="Affine Warped Blend" delay={0.5} />
                                         </div>
                                     </div>
                                 );
@@ -264,7 +272,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">🛰️</span> {section.title}
+                                            <Satellite className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -275,15 +283,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📷" title="Select Images" desc="Before & After Pairs" delay={0.1} />
+                                            <PipelineNode icon={Camera} title="Select Images" desc="Before & After Pairs" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🧮" title="Diff Mask" desc="Grayscale Pixel Sub" delay={0.2} />
+                                            <PipelineNode icon={Calculator} title="Diff Mask" desc="Grayscale Pixel Sub" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🧹" title="Filter Noise" desc="Morphological Closing/Opening" delay={0.3} />
+                                            <PipelineNode icon={Filter} title="Filter Noise" desc="Morphological Closing/Opening" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="🎯" title="CCL Labeling" desc="BFS Bounding Boxes" delay={0.4} />
+                                            <PipelineNode icon={Target} title="CCL Labeling" desc="BFS Bounding Boxes" delay={0.4} />
                                             <Arrow />
-                                            <PipelineNode icon="📥" title="Export" desc="Single Sheet / Batch ZIP" delay={0.5} />
+                                            <PipelineNode icon={Download} title="Export" desc="Single Sheet / Batch ZIP" delay={0.5} />
                                         </div>
                                     </div>
                                 );
@@ -295,7 +303,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">📋</span> {section.title}
+                                            <ClipboardList className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -306,15 +314,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📁" title="Upload" desc="Word Template & PDFs" delay={0.1} />
+                                            <PipelineNode icon={FolderOpen} title="Upload" desc="Word Template & PDFs" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🔍" title="Scan" desc="Extract Placeholders" delay={0.2} />
+                                            <PipelineNode icon={Search} title="Scan" desc="Extract Placeholders" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🧠" title="AI Extract" desc="LLM Document Mapping" delay={0.3} />
+                                            <PipelineNode icon={Brain} title="AI Extract" desc="LLM Document Mapping" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="📋" title="Verify" desc="Interactive Review" delay={0.4} />
+                                            <PipelineNode icon={ClipboardList} title="Verify" desc="Interactive Review" delay={0.4} />
                                             <Arrow />
-                                            <PipelineNode icon="📥" title="Download" desc="Formatted Word Doc" delay={0.5} />
+                                            <PipelineNode icon={Download} title="Download" desc="Formatted Word Doc" delay={0.5} />
                                         </div>
                                     </div>
                                 );
@@ -326,7 +334,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">📉</span> {section.title}
+                                            <TrendingDown className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -337,13 +345,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="🐍" title="Python ETL" desc="Clean & Aggregate" delay={0.1} />
+                                            <PipelineNode icon={Code2} title="Python ETL" desc="Clean & Aggregate" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="📦" title="Data Layer" desc="JS Module" delay={0.2} />
+                                            <PipelineNode icon={Layers} title="Data Layer" desc="JS Module" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="📊" title="Chart.js" desc="5 Dashboards" delay={0.3} />
+                                            <PipelineNode icon={BarChart3} title="Chart.js" desc="5 Dashboards" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="🔍" title="Explorer" desc="Search & Export" delay={0.4} />
+                                            <PipelineNode icon={Search} title="Explorer" desc="Search & Export" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -354,7 +362,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">📊</span> {section.title}
+                                            <BarChart3 className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -365,13 +373,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📁" title="Raw Data" desc="CSV Extraction" delay={0.1} />
+                                            <PipelineNode icon={FolderOpen} title="Raw Data" desc="CSV Extraction" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🐍" title="Python EDA" desc="Pandas & Cleaning" delay={0.2} />
+                                            <PipelineNode icon={Code2} title="Python EDA" desc="Pandas & Cleaning" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="⚙️" title="Data Modeling" desc="Power BI DAX" delay={0.3} />
+                                            <PipelineNode icon={Settings} title="Data Modeling" desc="Power BI DAX" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="📈" title="Dashboard" desc="Interactive Insights" delay={0.4} />
+                                            <PipelineNode icon={TrendingUp} title="Dashboard" desc="Interactive Insights" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -382,7 +390,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">📊</span> {section.title}
+                                            <BarChart3 className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -393,13 +401,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📌" title="Scenario" desc="Business Needs" delay={0.1} />
+                                            <PipelineNode icon={MapPin} title="Scenario" desc="Business Needs" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="📊" title="Visuals" desc="Chart Selection" delay={0.2} />
+                                            <PipelineNode icon={BarChart3} title="Visuals" desc="Chart Selection" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🎨" title="Dashboard" desc="Design UI" delay={0.3} />
+                                            <PipelineNode icon={Palette} title="Dashboard" desc="Design UI" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="💡" title="Insights" desc="Executive Comm." delay={0.4} />
+                                            <PipelineNode icon={Lightbulb} title="Insights" desc="Executive Comm." delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -410,7 +418,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">📊</span> {section.title}
+                                            <BarChart3 className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -421,13 +429,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📁" title="Raw Data" desc="Booking Data" delay={0.1} />
+                                            <PipelineNode icon={FolderOpen} title="Raw Data" desc="Booking Data" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🐍" title="Python EDA" desc="Data Cleaning" delay={0.2} />
+                                            <PipelineNode icon={Code2} title="Python EDA" desc="Data Cleaning" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="📊" title="Excel" desc="Pivot Tables" delay={0.3} />
+                                            <PipelineNode icon={BarChart3} title="Excel" desc="Pivot Tables" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="🏨" title="Dashboard" desc="Insights" delay={0.4} />
+                                            <PipelineNode icon={Hotel} title="Dashboard" desc="Insights" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -438,7 +446,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">🏦</span> {section.title}
+                                            <Landmark className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -449,13 +457,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="💻" title="Next.js UI" desc="Client React Dash" delay={0.1} />
+                                            <PipelineNode icon={Laptop} title="Next.js UI" desc="Client React Dash" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="⚡" title="API Routes" desc="Serverless Endpoints" delay={0.2} />
+                                            <PipelineNode icon={Zap} title="API Routes" desc="Serverless Endpoints" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🗄️" title="Prisma ORM" desc="Schema Validation" delay={0.3} />
+                                            <PipelineNode icon={Database} title="Prisma ORM" desc="Schema Validation" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="🛢️" title="PostgreSQL" desc="Neon Cloud DB" delay={0.4} />
+                                            <PipelineNode icon={Server} title="PostgreSQL" desc="Neon Cloud DB" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -466,7 +474,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">⚡</span> {section.title}
+                                            <Zap className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -477,13 +485,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="👤" title="User Action" desc="Search & Chat" delay={0.1} />
+                                            <PipelineNode icon={User} title="User Action" desc="Search & Chat" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="💻" title="Next.js App" desc="Immersive UI" delay={0.2} />
+                                            <PipelineNode icon={Laptop} title="Next.js App" desc="Immersive UI" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🧠" title="AI & APIs" desc="Gemini + TMDb" delay={0.3} />
+                                            <PipelineNode icon={Brain} title="AI & APIs" desc="Gemini + TMDb" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="🗄️" title="Database" desc="Supabase + Prisma" delay={0.4} />
+                                            <PipelineNode icon={Database} title="Database" desc="Supabase + Prisma" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -494,7 +502,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">⚡</span> {section.title}
+                                            <Zap className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -505,15 +513,15 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="👤" title="User Input" desc="News Article Text" delay={0.1} />
+                                            <PipelineNode icon={User} title="User Input" desc="News Article Text" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🧹" title="Pre-processing" desc="Clean & Lowercase" delay={0.2} />
+                                            <PipelineNode icon={Filter} title="Pre-processing" desc="Clean & Lowercase" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🧮" title="TF-IDF Math" desc="L2-Normalized Vector" delay={0.3} />
+                                            <PipelineNode icon={Calculator} title="TF-IDF Math" desc="L2-Normalized Vector" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="🧠" title="Inference" desc="Logistic Regression" delay={0.4} />
+                                            <PipelineNode icon={Brain} title="Inference" desc="Logistic Regression" delay={0.4} />
                                             <Arrow />
-                                            <PipelineNode icon="📊" title="Dashboard" desc="LIME Words Highlight" delay={0.5} />
+                                            <PipelineNode icon={BarChart3} title="Dashboard" desc="LIME Words Highlight" delay={0.5} />
                                         </div>
                                     </div>
                                 );
@@ -524,7 +532,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">⚙️</span> {section.title}
+                                            <Settings className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -535,13 +543,13 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="📝" title="User Form" desc="Data Capture" delay={0.1} />
+                                            <PipelineNode icon={FileEdit} title="User Form" desc="Data Capture" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="🤖" title="Gemini AI" desc="Categorization" delay={0.2} />
+                                            <PipelineNode icon={Bot} title="Gemini AI" desc="Categorization" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🔀" title="Routing Switch" desc="Logic Branching" delay={0.3} />
+                                            <PipelineNode icon={Layers} title="Routing Switch" desc="Logic Branching" delay={0.3} />
                                             <Arrow />
-                                            <PipelineNode icon="⚡" title="Integrations" desc="Airtable, Slack, Gmail" delay={0.4} />
+                                            <PipelineNode icon={Zap} title="Integrations" desc="Airtable, Slack, Gmail" delay={0.4} />
                                         </div>
                                     </div>
                                 );
@@ -552,7 +560,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">🏗️</span> {section.title}
+                                            <Wrench className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                                             {section.content}
@@ -563,11 +571,11 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                             {/* Glowing connecting line (Desktop) */}
                                             <div className="hidden sm:block absolute top-1/2 left-10 right-10 h-[2px] bg-gradient-to-r from-purple-500/10 via-purple-500/60 to-purple-500/10 -translate-y-1/2 z-0 animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
                                             
-                                            <PipelineNode icon="💻" title="React UI" desc="TypeScript + Vite" delay={0.1} />
+                                            <PipelineNode icon={Laptop} title="React UI" desc="TypeScript + Vite" delay={0.1} />
                                             <Arrow />
-                                            <PipelineNode icon="⚙️" title="Flask API" desc="Python Backend" delay={0.2} />
+                                            <PipelineNode icon={Settings} title="Flask API" desc="Python Backend" delay={0.2} />
                                             <Arrow />
-                                            <PipelineNode icon="🫀" title="ML Model" desc="Random Forest Classifier" delay={0.3} />
+                                            <PipelineNode icon={Heart} title="ML Model" desc="Random Forest Classifier" delay={0.3} />
                                         </div>
                                     </div>
                                 );
@@ -578,7 +586,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                                 return (
                                     <div key={idx} id={section.id} className="relative pt-10 scroll-mt-24">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                                            <span className="text-purple-500">{section.id === 'features' ? '✨' : '🛠️'}</span> {section.title}
+                                            {section.id === 'features' ? <Sparkles className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> : <Wrench className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} />} {section.title}
                                         </h2>
                                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
                                             {section.content}
@@ -635,7 +643,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                 {project.content?.videoUrl && (
                     <div id="demo" className="pt-10 scroll-mt-24">
                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                            <span className="text-purple-500">▶</span> Project Demo
+                            <Play className="w-6 h-6 text-purple-500 fill-purple-500/20 shrink-0" strokeWidth={1.5} /> Project Demo
                         </h2>
                         <div className="w-full aspect-video rounded-2xl overflow-hidden glass-card shadow-[0_0_40px_rgba(168,85,247,0.15)] border border-purple-500/20">
                             <video 
@@ -655,7 +663,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                 {project.content?.images && project.content.images.length > 0 && (
                     <div id="demo" className="pt-10 scroll-mt-24">
                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                            <span className="text-purple-500">📸</span> Project Gallery
+                            <ImageIcon className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> Project Gallery
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {project.content.images.map((img, idx) => (
@@ -675,7 +683,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                 {project.content?.certificate && (
                     <div className="pt-10 scroll-mt-24">
                         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 flex items-center gap-3">
-                            <span className="text-purple-500">🏆</span> Certificate of Completion
+                            <Award className="w-6 h-6 text-purple-500 shrink-0" strokeWidth={1.5} /> Certificate of Completion
                         </h2>
                         <div className="relative max-w-2xl mx-auto rounded-2xl overflow-hidden glass-card border-2 border-amber-400/40 shadow-[0_0_30px_rgba(251,191,36,0.15)] group hover:border-amber-400/70 transition-all duration-300 cursor-pointer" onClick={() => window.open(project.content!.certificate!, '_blank')}>
                             <img 
@@ -691,7 +699,7 @@ export default function ProjectDetailView({ project }: { project: Project }) {
                 {project.content?.note && (
                     <div className="mt-8 p-6 sm:p-8 rounded-2xl glass-card border border-purple-500/20 bg-purple-500/5">
                         <div className="flex items-start gap-4">
-                            <span className="text-purple-500 text-2xl mt-1">💡</span>
+                            <Lightbulb className="w-6 h-6 text-purple-500 shrink-0 mt-1" strokeWidth={1.5} />
                             <div>
                                 <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-2">Project Note</h3>
                                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">

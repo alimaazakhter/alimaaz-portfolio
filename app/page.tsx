@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Marquee from "./components/Marquee";
 import { useEffect, useRef, useState } from "react";
+import { GraduationCap, MapPin, Briefcase, Brain, BarChart3, Bot, Globe, Zap } from 'lucide-react';
 
 function useReveal() {
     const ref = useRef<HTMLDivElement>(null);
@@ -101,19 +102,22 @@ export default function Home() {
 
                     <div className="space-y-4">
                         {[
-                            { icon: "🎓", title: "Education", desc: "MCA — Sardar Vallabhbhai Global University" },
-                            { icon: "📍", title: "Location", desc: "Ahmedabad, Gujarat, India" },
-                            { icon: "💼", title: "Status", desc: "Open for Internships & Freelance" },
-                            { icon: "🔬", title: "Focus", desc: "ML, Generative AI, Data Engineering" },
-                        ].map((item, i) => (
-                            <div key={i} className="glass-card rounded-xl p-4 sm:p-5 flex items-start gap-4 group" style={{ animationDelay: `${i * 0.1}s` }}>
-                                <span className="text-2xl shrink-0">{item.icon}</span>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 dark:text-white text-sm sm:text-base">{item.title}</h4>
-                                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">{item.desc}</p>
+                            { icon: GraduationCap, title: "Education", desc: "MCA — Sardar Vallabhbhai Global University" },
+                            { icon: MapPin, title: "Location", desc: "Ahmedabad, Gujarat, India" },
+                            { icon: Briefcase, title: "Status", desc: "Open for Internships & Freelance" },
+                            { icon: Brain, title: "Focus", desc: "ML, Generative AI, Data Engineering" },
+                        ].map((item, i) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <div key={i} className="glass-card rounded-xl p-4 sm:p-5 flex items-start gap-4 group" style={{ animationDelay: `${i * 0.1}s` }}>
+                                    <IconComponent className="w-6 h-6 text-indigo-400 shrink-0 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                                    <div>
+                                        <h4 className="font-semibold text-slate-800 dark:text-white text-sm sm:text-base">{item.title}</h4>
+                                        <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">{item.desc}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
 
                         <a href="/resume.pdf" download className="glass-card rounded-xl p-4 sm:p-5 flex items-center justify-center gap-2 text-indigo-400 font-semibold hover:text-indigo-300 no-underline group text-sm sm:text-base">
                             Download Resume
@@ -137,17 +141,22 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                         {[
-                            { icon: "📊", title: "Data Analysis", desc: "Exploring, cleaning, and visualizing complex datasets with Python, Pandas, and modern BI tools." },
-                            { icon: "🤖", title: "Machine Learning", desc: "Designing and training ML models for classification, prediction, and intelligent automation." },
-                            { icon: "🌐", title: "AI Web Apps", desc: "Building interactive interfaces with Flask and Streamlit that let users interact with ML models." },
-                            { icon: "⚡", title: "AI Automation", desc: "Creating smart automation pipelines connecting APIs, LLMs, and tools to eliminate manual work." },
-                        ].map((item, i) => (
-                            <div key={i} className="glass-card rounded-2xl p-5 sm:p-7 group" style={{ animationDelay: `${i * 0.1}s` }}>
-                                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
-                                <h3 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-2 group-hover:text-indigo-400 transition-colors">{item.title}</h3>
-                                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
-                            </div>
-                        ))}
+                            { icon: BarChart3, title: "Data Analysis", desc: "Exploring, cleaning, and visualizing complex datasets with Python, Pandas, and modern BI tools." },
+                            { icon: Bot, title: "Machine Learning", desc: "Designing and training ML models for classification, prediction, and intelligent automation." },
+                            { icon: Globe, title: "AI Web Apps", desc: "Building interactive interfaces with Flask and Streamlit that let users interact with ML models." },
+                            { icon: Zap, title: "AI Automation", desc: "Creating smart automation pipelines connecting APIs, LLMs, and tools to eliminate manual work." },
+                        ].map((item, i) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <div key={i} className="glass-card rounded-2xl p-5 sm:p-7 group" style={{ animationDelay: `${i * 0.1}s` }}>
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                        <IconComponent className="w-6 h-6 text-indigo-400" strokeWidth={1.5} />
+                                    </div>
+                                    <h3 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-2 group-hover:text-indigo-400 transition-colors">{item.title}</h3>
+                                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

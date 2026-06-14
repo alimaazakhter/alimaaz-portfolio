@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { FileText } from 'lucide-react';
 
 interface Certificate {
     id: string;
@@ -127,7 +128,7 @@ function CertCard({ cert, index }: { cert: Certificate; index: number }) {
                 <div className="absolute inset-0 z-0 flex items-center justify-center p-4">
                     {cert.credentialLink.endsWith('.pdf') ? (
                         <div className="text-center group-hover:scale-105 transition-transform duration-500 flex flex-col items-center justify-center h-full">
-                            <span className="text-6xl mb-2 drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">📄</span>
+                            <FileText className="w-16 h-16 text-indigo-500/80 drop-shadow-[0_0_15px_rgba(99,102,241,0.5)] mb-2" strokeWidth={1.2} />
                             <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">PDF Document</span>
                         </div>
                     ) : (

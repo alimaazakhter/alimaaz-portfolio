@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from "react";
+import { GraduationCap, Code2, Rocket, Award } from "lucide-react";
 
 function useReveal() {
     const ref = useRef<HTMLDivElement>(null);
@@ -38,7 +39,7 @@ export default function Profile() {
             <section className="py-12 sm:py-16">
                 <div ref={eduRef.ref} className={`max-w-6xl mx-auto px-4 sm:px-6 ${eduRef.visible ? 'animate-reveal-up' : 'opacity-0'}`}>
                     <h2 className="text-2xl sm:text-3xl font-black text-slate-800 dark:text-white mb-8 sm:mb-10 flex items-center gap-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                        <span className="text-2xl">🎓</span> Academic Journey
+                        <GraduationCap className="w-7 h-7 text-indigo-400 shrink-0" strokeWidth={1.5} /> Academic Journey
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         {[
@@ -66,7 +67,7 @@ export default function Profile() {
             <section className="py-12 sm:py-16">
                 <div ref={skillRef.ref} className={`max-w-6xl mx-auto px-4 sm:px-6 ${skillRef.visible ? 'animate-reveal-up' : 'opacity-0'}`}>
                     <h2 className="text-2xl sm:text-3xl font-black text-slate-800 dark:text-white mb-8 sm:mb-10 flex items-center gap-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                        <span className="text-2xl">⚡</span> Tech Stack
+                        <Code2 className="w-7 h-7 text-indigo-400 shrink-0" strokeWidth={1.5} /> Tech Stack
                     </h2>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
                         {skills.map((skill, i) => (
@@ -84,7 +85,7 @@ export default function Profile() {
             <section className="py-12 sm:py-16">
                 <div ref={projRef.ref} className={`max-w-6xl mx-auto px-4 sm:px-6 ${projRef.visible ? 'animate-reveal-up' : 'opacity-0'}`}>
                     <h2 className="text-2xl sm:text-3xl font-black text-slate-800 dark:text-white mb-8 sm:mb-10 flex items-center gap-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                        <span className="text-2xl">🚀</span> Key Projects
+                        <Rocket className="w-7 h-7 text-indigo-400 shrink-0" strokeWidth={1.5} /> Key Projects
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         {[
@@ -108,7 +109,7 @@ export default function Profile() {
             <section className="py-12 sm:py-16">
                 <div ref={certRef.ref} className={`max-w-6xl mx-auto px-4 sm:px-6 ${certRef.visible ? 'animate-reveal-up' : 'opacity-0'}`}>
                     <h2 className="text-2xl sm:text-3xl font-black text-slate-800 dark:text-white mb-8 sm:mb-10 flex items-center gap-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                        <span className="text-2xl">🏆</span> Certifications
+                        <Award className="w-7 h-7 text-indigo-400 shrink-0" strokeWidth={1.5} /> Certifications
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         {[

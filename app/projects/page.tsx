@@ -1,8 +1,33 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-
 import { Project, Category as Cat, projects } from '@/lib/data';
+import { 
+    Layers, Brain, Bot, BarChart3, Globe, Shield, Sprout, 
+    GraduationCap, Thermometer, Satellite, ClipboardList, Landmark, 
+    Settings, TrendingDown, TrendingUp, Hotel, Heart, Film 
+} from 'lucide-react';
+
+function getProjectIcon(iconName: string) {
+    const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
+        Bot: Bot,
+        Shield: Shield,
+        Flower2: Sprout,
+        GraduationCap: GraduationCap,
+        Thermometer: Thermometer,
+        Satellite: Satellite,
+        ClipboardList: ClipboardList,
+        Landmark: Landmark,
+        Settings: Settings,
+        TrendingDown: TrendingDown,
+        BarChart3: BarChart3,
+        TrendingUp: TrendingUp,
+        Hotel: Hotel,
+        Heart: Heart,
+        Film: Film
+    };
+    return iconMap[iconName] || Bot;
+}
 
 const gradients: Record<string, string> = { ml: "from-purple-500/30 to-blue-500/30", ai: "from-cyan-500/30 to-blue-600/30", data: "from-orange-500/30 to-amber-500/30", web: "from-emerald-500/30 to-teal-500/30" };
 const glows: Record<string, string> = { ml: "hover:border-purple-500/30", ai: "hover:border-cyan-500/30", data: "hover:border-amber-500/30", web: "hover:border-emerald-500/30" };
@@ -28,7 +53,10 @@ function Card({ project, index }: { project: Project; index: number }) {
                     />
                 ) : (
                     <div className={`w-full h-full gradient-shimmer gradient-animate bg-gradient-to-br ${gradients[project.category]} flex items-center justify-center`}>
-                        <span className="emoji-float text-3xl sm:text-5xl drop-shadow-lg select-none">{project.emoji}</span>
+                        {(() => {
+                            const FallbackIcon = getProjectIcon(project.emoji);
+                            return <FallbackIcon className="w-12 h-12 text-white/80 drop-shadow-lg" strokeWidth={1.5} />;
+                        })()}
                     </div>
                 )}
                 <span className="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-slate-950/60 backdrop-blur-md text-white/90 px-3 py-1 rounded-full border border-white/10 z-10">
@@ -50,7 +78,13 @@ function Card({ project, index }: { project: Project; index: number }) {
 export default function Projects() {
     const [filter, setFilter] = useState<Cat>('all');
     const filtered = projects.filter(p => filter === 'all' || p.category === filter);
-    const tabs = [{ id: 'all', label: 'All Projects', icon: '🗂️' }, { id: 'ml', label: 'Machine Learning', icon: '🧠' }, { id: 'ai', label: 'AI & Automation', icon: '🤖' }, { id: 'data', label: 'Data & Dashboards', icon: '📊' }, { id: 'web', label: 'Web Applications', icon: '🌐' }];
+    const tabs = [
+        { id: 'all', label: 'All Projects', icon: Layers }, 
+        { id: 'ml', label: 'Machine Learning', icon: Brain }, 
+        { id: 'ai', label: 'AI & Automation', icon: Bot }, 
+        { id: 'data', label: 'Data & Dashboards', icon: BarChart3 }, 
+        { id: 'web', label: 'Web Applications', icon: Globe }
+    ];
 
     return (
         <div className="pt-24 sm:pt-32 pb-16 sm:pb-24">
@@ -64,11 +98,14 @@ export default function Projects() {
 
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: '0.15s' }}>
-                    {tabs.map(t => (
-                        <button key={t.id} onClick={() => setFilter(t.id as Cat)} className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${filter === t.id ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25 tab-active' : 'bg-white/5 dark:bg-white/5 border border-slate-200/20 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:border-indigo-500/30 hover:text-indigo-400'}`}>
-                            <span className="text-sm">{t.icon}</span>{t.label}
-                        </button>
-                    ))}
+                    {tabs.map(t => {
+                        const TabIcon = t.icon;
+                        return (
+                            <button key={t.id} onClick={() => setFilter(t.id as Cat)} className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${filter === t.id ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/25 tab-active' : 'bg-white/5 dark:bg-white/5 border border-slate-200/20 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:border-indigo-500/30 hover:text-indigo-400'}`}>
+                                <TabIcon className="w-4 h-4" />{t.label}
+                            </button>
+                        );
+                    })}
                 </div>
 
                 <p className="text-sm text-slate-500 dark:text-slate-500 mb-8 animate-count-fade" key={filter}>
