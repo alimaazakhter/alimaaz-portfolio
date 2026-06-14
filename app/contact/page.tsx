@@ -18,6 +18,14 @@ const GithubIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
     </svg>
 );
 
+const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+);
+
 function useReveal() {
     const ref = useRef<HTMLDivElement>(null);
     const [visible, setVisible] = useState(false);
@@ -70,7 +78,7 @@ export default function Contact() {
                     {/* Social links */}
                     <div className="glass-card rounded-xl p-4 sm:p-5">
                         <span className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 dark:text-slate-500 font-medium block mb-3">Connect</span>
-                        <div className="flex gap-3">
+                        <div className="flex flex-wrap gap-3">
                             <a href="https://www.linkedin.com/in/alimaaz-akhter-38014a240/" target="_blank" rel="noopener" className="px-5 py-2.5 rounded-lg bg-indigo-500/10 text-indigo-400 font-medium text-sm hover:bg-indigo-500/20 transition-all no-underline flex items-center gap-2 group/btn">
                                 <LinkedinIcon className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
                                 LinkedIn
@@ -78,6 +86,10 @@ export default function Contact() {
                             <a href="https://github.com/alimaazakhter" target="_blank" rel="noopener" className="px-5 py-2.5 rounded-lg bg-indigo-500/10 text-indigo-400 font-medium text-sm hover:bg-indigo-500/20 transition-all no-underline flex items-center gap-2 group/btn">
                                 <GithubIcon className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
                                 GitHub
+                            </a>
+                            <a href="https://www.instagram.com/alimaaz.707__?igsh=bXBvdzY1c3h2dHYz&utm_source=qr" target="_blank" rel="noopener" className="px-5 py-2.5 rounded-lg bg-indigo-500/10 text-indigo-400 font-medium text-sm hover:bg-indigo-500/20 transition-all no-underline flex items-center gap-2 group/btn">
+                                <InstagramIcon className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                                Instagram
                             </a>
                         </div>
                     </div>
